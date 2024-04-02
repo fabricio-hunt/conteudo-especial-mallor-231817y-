@@ -3,8 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CSS Grid Example</title>
-<style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<!-- 228263 produto-->
+<style>  
 
     body{
         margin: 0;
@@ -12,10 +15,17 @@
     }
 
     .main-container{
-        margin: 0;
+        max-width: 80%;
+        margin: 0 auto;
         padding:0; 
         display: flex;
         flex-direction: column;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 400;
+        line-height: 25px;
+        font-size: 20px;
+        background: rgb(226, 221, 221);
+        background: linear-gradient(0deg, rgb(238, 232, 232) 0%, rgba(255,255,255,1) 50%);
     }
 
     .page-header {
@@ -24,50 +34,57 @@
         width: 250px;
         height: auto;
     }
+
     .page-header img {
         max-width: 100%;
         height: auto;
         margin: 0;
         padding: 0;
-
     }
 
   .grid-container {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Duas colunas iguais */
-    gap: 10px; /* Espaçamento entre os itens */
-  }
-
-  .grid-container2 {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* Duas colunas iguais */
-    gap: 20px; /* Espaçamento entre os itens */
+    grid-template-columns: 1fr 1fr; 
+    gap: 10px; 
   }
 
   .grid-item {
     padding: 20px;
     text-align: center;
-    border: 2px solid orange;
   }
 
   .text {
-    grid-column: 1 / span 1; /* Ocupa a primeira coluna */
-    grid-row: 1; /* Ocupa a primeira linha */
+    grid-column: 1 / span 1; 
+    grid-row: 1; 
     display: flex;
     align-items: center;
    
   }
 
   .image {
-    grid-column: 2 / span 1; /* Ocupa a segunda coluna */
-    grid-row: 1; /* Ocupa a primeira linha */
+    grid-column: 2 / span 1; 
+    grid-row: 1; 
   }
 
-  /* Tornando a imagem responsiva */
   .image img {
     max-width: 100%;
     height: auto;
+    box-shadow: 0px 69px 26px -45px rgba(129, 126, 126, 0.1);
   }
+
+  .main-container .bk-video{
+      max-width: 100%;
+      height: auto;
+      margin: 0 auto;
+    }
+
+    
+  .main-container .bk-video video{
+      max-width: 100%;
+      height: auto;
+    }
+
+
 </style>
 </head>
 <body>
@@ -85,10 +102,19 @@
     <div class="grid-item image">
         <img src="/image/EGEO DR FRENTE.png" alt="Descrição da Imagem">
     </div>
-    </div> <!--fim  grid container-->
+    </div> 
+
+    <section class="bk-video">
+
+      <video autoplay muted loop>
+      
+        <source src="https://static.bemol.com.br/pages/bemol/conteudo-especial/mallory/228263/ventiladores-neo-air-mallory.mp4" type="video/mp4">
+      
+      </video>
+  
 
    
-</div> <!--fim main-container-->
+</div> 
 
 
 </body>
